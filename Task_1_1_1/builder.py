@@ -34,11 +34,17 @@ def create_jar():
     os.remove("manifest.txt")
 
 
+def generate_docs():
+    os.makedirs(DOC_DIR, exist_ok=True)
+    run_cmd(f"javadoc -d {DOC_DIR} {SRC_DIR}/*.java", "Ошибка генерации документации")
+
+
 def run():
     run_cmd(f"java -jar {JAR_FILE}", "Ошибка запуска приложения")
 
 
 if __name__ == "__main__":
     compile_java()
+    generate_docs()
     create_jar()
     run()

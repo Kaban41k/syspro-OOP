@@ -1,6 +1,14 @@
 package ru.nsu.anishchenko;
 
+/**
+ * Implementing heapsort in class
+ */
 public class Heapsort {
+    /**
+     * Heap sorting method
+     * @param array    array to be sorted
+     * @return         return sorted array
+     */
     public static int[] heapsort(int[] array) {
         int n = array.length;
 
@@ -19,6 +27,12 @@ public class Heapsort {
         return array;
     }
 
+    /**
+     * Method for sieving
+     * @param array  array for sieving
+     * @param n      number of elements in array
+     * @param i      index of largest element
+     */
     static void heapify(int[] array, int n, int i) {
         int largest = i;
         int left = 2 * i + 1;
