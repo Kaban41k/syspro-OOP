@@ -6,7 +6,7 @@ import sys
 SRC_DIR = "src\\main\\java\\ru\\nsu\\anishchenko"
 BIN_DIR = "bin"
 DOC_DIR = "docs"
-MAIN_CLASS = "ru.nsu.anishchenko.Heapsort"
+MAIN_CLASS = "ru.nsu.anishchenko.Main"
 JAR_FILE = "heapsort.jar"
 
 
