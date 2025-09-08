@@ -20,6 +20,16 @@ test {
 }
 
 jacocoTestReport {
+    dependsOn test
+
+    afterEvaluate {
+        classDirectories.setFrom(files(classDirectories.files.collect {
+            fileTree(dir: it, exclude: [
+                    "ru/nsu/anishchenko/Main.class"
+            ])
+        }))
+    }
+
     reports {
         xml.required = true
     }
