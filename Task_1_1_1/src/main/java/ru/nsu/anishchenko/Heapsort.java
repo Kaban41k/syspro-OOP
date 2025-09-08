@@ -1,7 +1,5 @@
 package ru.nsu.anishchenko;
 
-import java.util.Arrays;
-
 public class Heapsort {
     public static int[] heapsort(int[] array) {
         int n = array.length;
