@@ -1,11 +1,11 @@
 package ru.nsu.anishchenko;
 
 /**
- * Implementing heapsort in class
+ * Implementing heapsort in class.
  */
 public class Heapsort {
     /**
-     * Heap sorting method
+     * Heap sorting method.
      * @param array    array to be sorted
      * @return         return sorted array
      */
@@ -28,7 +28,7 @@ public class Heapsort {
     }
 
     /**
-     * Method for sieving
+     * Method for sieving.
      * @param array  array for sieving
      * @param n      number of elements in array
      * @param i      index of largest element
