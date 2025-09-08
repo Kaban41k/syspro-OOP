@@ -6,6 +6,7 @@ package ru.nsu.anishchenko;
 public class Heapsort {
     /**
      * Heap sorting method.
+     *
      * @param array    array to be sorted
      * @return         return sorted array
      */
@@ -29,6 +30,7 @@ public class Heapsort {
 
     /**
      * Method for sieving.
+     *
      * @param array  array for sieving
      * @param n      number of elements in array
      * @param i      index of largest element
