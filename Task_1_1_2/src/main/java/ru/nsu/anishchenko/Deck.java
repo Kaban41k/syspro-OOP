@@ -29,7 +29,9 @@ public class Deck {
             fillDeck();
         }
 
-        return cards.removeLast();
+        nCards--;
+
+        return cards.remove(cards.size() - 1);
     }
 
     public void printDeck() {

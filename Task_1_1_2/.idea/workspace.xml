@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6b8a42aa-a714-47c1-9da8-efc15aa68cb4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/anishchenko/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/anishchenko/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/anishchenko/CardDecoder.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/anishchenko/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/anishchenko/Deck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/anishchenko/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/anishchenko/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/anishchenko/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/anishchenko/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +73,7 @@
     "settings.editor.selected.configurable": "preferences.editor"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Gradle.Task_1_1_2 [assemble]">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.nsu.anishchenko.Main" />
       <module name="Task_1_1_2.main" />
@@ -90,6 +86,48 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="Task_1_1_2 [assemble]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="assemble" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="Task_1_1_2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
     </configuration>
     <configuration name="Tests in 'Task_1_1_2'" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
@@ -126,6 +164,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Task_1_1_2 [assemble]" />
+        <item itemvalue="Gradle.Task_1_1_2" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
