@@ -2,6 +2,9 @@ package ru.nsu.anishchenko;
 
 import java.util.Scanner;
 
+/**
+ * Blackjack game.
+ */
 public class Game {
     private Player dealer = new Player();
     private Player player = new Player();
@@ -14,10 +17,16 @@ public class Game {
     private int dealerPoints = 0;
     private int playerPoints = 0;
 
+    /**
+     * Print welcome.
+     */
     public Game() {
         print("Добро пожаловать в Блэкджек!\n");
     }
 
+    /**
+     * New round of blackjack.
+     */
     public void startNewRound() {
         isGameStopped = false;
 
@@ -36,6 +45,9 @@ public class Game {
         endRound();
     }
 
+    /**
+     * Deal two cards to the player and the dealer.
+     */
     private void dealCards() {
         if (isGameStopped) return;
 
@@ -52,6 +64,10 @@ public class Game {
         if (player.getPoints() == 21) isGameStopped = true;
     }
 
+    /**
+     * Player's Turn.
+     * The player get a card until he stops, win or lose.
+     */
     private void playerMove() {
         if (isGameStopped) return;
 
@@ -76,9 +92,12 @@ public class Game {
 
             print("\nВведите \"1\", чтобы взять карту, и \"0\", чтобы остановиться...");
         }
-        scanner.close();
     }
 
+    /**
+     * Dealer's Turn.
+     * The dealer get a card until the points are greater than or equal to 17.
+     */
     private void dealerMove() {
         if (isGameStopped) return;
 
@@ -98,6 +117,9 @@ public class Game {
         }
     }
 
+    /**
+     * Stop the round and determine the winner.
+     */
     private void endRound() {
         isGameStopped = true;
         roundN++;
@@ -115,11 +137,17 @@ public class Game {
         print("Счёт " + playerPoints + ":" + dealerPoints);
     }
 
+    /**
+     * Print the cards and points in the player's and dealer's hands.
+     */
     private void printHands() {
         print("     Ваши карты: " + player.getStringOfHand());
         print("     Карты дилера: " + dealer.getStringOfHand());
     }
 
+    /**
+     * Just short print.
+     */
     private void print(String str) {
         System.out.println(str);
     }
