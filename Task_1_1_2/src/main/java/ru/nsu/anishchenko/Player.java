@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class Player {
     private final ArrayList<Card> hand;
 
-    private int points = 0;
+    private int points;
 
     /**
      * Constructs a Player with the specified name.

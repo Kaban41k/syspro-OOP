@@ -17,20 +17,14 @@ public class Deck {
     public int numOfCards = 0;
 
     /**
-     * Fill deck array.
+     * Clear deck and add all types of card.
      */
-    public Deck() {
-        fillDeck();
-    }
+    public void fillDeck() {
+        cards = new ArrayList<>();
 
-    /**
-     * Add all types of card in deck array.
-     */
-    private void fillDeck() {
         for (Card.CardSuit suit : Card.CardSuit.values()) {
             for (Card.CardRank rank : Card.CardRank.values()) {
-                cards.add(new Card(rank, suit));
-                numOfCards++;
+                addCard(new Card(rank, suit));
             }
         }
     }
@@ -40,6 +34,16 @@ public class Deck {
      */
     public void shuffle() {
         Collections.shuffle(cards);
+    }
+
+    /**
+     * Add card.
+     *
+     * @param card card which need to add
+     */
+    public void addCard(Card card) {
+        numOfCards++;
+        cards.add(card);
     }
 
     /**

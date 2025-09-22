@@ -26,11 +26,14 @@ public class Game {
 
     /**
      * New round of blackjack.
+     *
+     * @param newdeck game deck
+     * @return did the player win
      */
-    public void startNewRound() {
+    public boolean startNewRound(Deck newdeck) {
         isGameStopped = false;
 
-        deck = new Deck();
+        deck = newdeck;
         deck.shuffle();
 
         dealer = new Player();
@@ -42,7 +45,19 @@ public class Game {
         playerMove();
         dealerMove();
 
-        endRound();
+        return endRound();
+    }
+
+
+    /**
+     * Start round with default shuffled deck.
+     */
+    public boolean startRoundWithDefaultDeck() {
+        Deck defaultDeck = new Deck();
+        defaultDeck.fillDeck();
+        defaultDeck.shuffle();
+
+        return startNewRound(defaultDeck);
     }
 
     /**
@@ -125,22 +140,29 @@ public class Game {
 
     /**
      * Stop the round and determine the winner.
+     *
+     * @return did the player win
      */
-    private void endRound() {
+    private boolean endRound() {
         isGameStopped = true;
         roundN++;
+
+        boolean result;
 
         print("");
 
         if (player.getPoints() > 21 || dealer.getPoints() <= 21 && player.getPoints() < dealer.getPoints()) {
             print("Дилер выиграл раунд!");
             dealerPoints++;
+            result = false;
         } else {
             print("Вы выиграли раунд!");
             playerPoints++;
+            result = true;
         }
 
         print("Счёт " + playerPoints + ":" + dealerPoints);
+        return result;
     }
 
     /**
