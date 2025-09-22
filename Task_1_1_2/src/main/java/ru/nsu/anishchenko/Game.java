@@ -34,7 +34,6 @@ public class Game {
         isGameStopped = false;
 
         deck = newdeck;
-        deck.shuffle();
 
         dealer = new Player();
         player = new Player();
@@ -68,10 +67,10 @@ public class Game {
             return;
         }
 
-        player.getCardFromDeck(deck);
-        dealer.getCardFromDeck(deck);
-        player.getCardFromDeck(deck);
-        dealer.getCardFromDeck(deck);
+        for (int i = 0; i < 2; i++) {
+            player.getCardFromDeck(deck);
+            dealer.getCardFromDeck(deck);
+        }
 
         dealer.getCardFromHand(1).turnOver();
 
