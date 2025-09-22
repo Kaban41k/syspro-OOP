@@ -2,6 +2,8 @@ package ru.nsu.anishchenko;
 
 import org.junit.jupiter.api.Test;
 
+import java.io.ByteArrayInputStream;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class GameTest {
@@ -65,7 +67,22 @@ class GameTest {
         deck.addCard(new Card(Card.CardRank.ACE, Card.CardSuit.HEARTS));
         deck.addCard(new Card(Card.CardRank.ACE, Card.CardSuit.DIAMONDS));
 
-        deck.printDeck();
         assertTrue(game.startNewRound(deck));
+    }
+
+    @Test
+    void checkDealersInstantWin() {
+        Deck deck = new Deck();
+        Game game = new Game();
+
+        deck.addCard(new Card(Card.CardRank.ACE, Card.CardSuit.CLUBS));
+        deck.addCard(new Card(Card.CardRank.ACE, Card.CardSuit.HEARTS));
+        deck.addCard(new Card(Card.CardRank.KING, Card.CardSuit.DIAMONDS));
+        deck.addCard(new Card(Card.CardRank.ACE, Card.CardSuit.DIAMONDS));
+
+        String input = "0";
+        System.setIn(new ByteArrayInputStream(input.getBytes()));
+
+        assertFalse(game.startNewRound(deck));
     }
 }

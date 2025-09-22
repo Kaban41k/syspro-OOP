@@ -60,13 +60,4 @@ public class Deck {
 
         return cards.remove(cards.size() - 1);
     }
-
-    /**
-     * Print all cards name in deck array.
-     */
-    public void printDeck() {
-        for (Card card : cards) {
-            System.out.println(card.getName());
-        }
-    }
 }
