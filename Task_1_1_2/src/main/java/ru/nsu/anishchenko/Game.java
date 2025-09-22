@@ -68,10 +68,10 @@ public class Game {
             return;
         }
 
-        for (int i = 0; i < 2; i++) {
-            player.getCardFromDeck(deck);
-            dealer.getCardFromDeck(deck);
-        }
+        player.getCardFromDeck(deck);
+        dealer.getCardFromDeck(deck);
+        player.getCardFromDeck(deck);
+        dealer.getCardFromDeck(deck);
 
         dealer.getCardFromHand(1).turnOver();
 
