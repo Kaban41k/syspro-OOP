@@ -19,7 +19,7 @@ public class Player {
     }
 
     /**
-     * Get a card from the deck
+     * Get a card from the deck.
      *
      * @param deck deck from which you need to get a card
      * @return card from deck
@@ -42,17 +42,20 @@ public class Player {
 
         for (int i = 0; i < hand.size(); i++) {
             str.append(hand.get(i).getName());
-            if (i != hand.size() - 1)
+            if (i != hand.size() - 1) {
                 str.append(", ");
+            }
 
-            if (hand.get(i).isHidden)
+            if (hand.get(i).isHidden) {
                 isPointsHidden = true;
+            }
         }
 
         str.append("]");
 
-        if (!isPointsHidden)
+        if (!isPointsHidden) {
             str.append(" => ").append(getPoints());
+        }
 
         return str.toString();
     }

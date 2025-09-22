@@ -14,7 +14,7 @@ public class Deck {
     /**
      * Number of cards in the deck.
      */
-    public int nCards = 0;
+    public int numOfCards = 0;
 
     /**
      * Fill deck array.
@@ -30,7 +30,7 @@ public class Deck {
         for (Card.CardSuit suit : Card.CardSuit.values()) {
             for (Card.CardRank rank : Card.CardRank.values()) {
                 cards.add(new Card(rank, suit));
-                nCards++;
+                numOfCards++;
             }
         }
     }
@@ -48,11 +48,11 @@ public class Deck {
      * @return last card in deck array
      */
     public Card getCard() {
-        if (nCards == 0) {
+        if (numOfCards == 0) {
             fillDeck();
         }
 
-        nCards--;
+        numOfCards--;
 
         return cards.remove(cards.size() - 1);
     }

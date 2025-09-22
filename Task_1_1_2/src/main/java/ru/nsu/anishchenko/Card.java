@@ -41,7 +41,9 @@ public class Card {
      * @return card rank, suit, cost
      */
     public String getName() {
-        if (!isHidden) { return rank.getRank() + " " + suit.getSuit() + " (" + cost + ")"; }
+        if (!isHidden) {
+            return rank.getRank() + " " + suit.getSuit() + " (" + cost + ")";
+        }
         return "<(закрытая карта)>";
     }
 

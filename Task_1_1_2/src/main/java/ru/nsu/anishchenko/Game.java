@@ -49,7 +49,9 @@ public class Game {
      * Deal two cards to the player and the dealer.
      */
     private void dealCards() {
-        if (isGameStopped) return;
+        if (isGameStopped) {
+            return;
+        }
 
         for (int i = 0; i < 2; i++) {
             player.getCardFromDeck(deck);
@@ -69,7 +71,9 @@ public class Game {
      * The player get a card until he stops, win or lose.
      */
     private void playerMove() {
-        if (isGameStopped) return;
+        if (isGameStopped) {
+            return;
+        }
 
         Scanner scanner = new Scanner(System.in);
         int msg;
@@ -99,7 +103,9 @@ public class Game {
      * The dealer get a card until the points are greater than or equal to 17.
      */
     private void dealerMove() {
-        if (isGameStopped) return;
+        if (isGameStopped) {
+            return;
+        }
 
         print("\n--Ход дилера--");
         dealer.getCardFromHand(1).turnOver();
