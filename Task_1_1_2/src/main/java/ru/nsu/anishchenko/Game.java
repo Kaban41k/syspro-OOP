@@ -77,7 +77,9 @@ public class Game {
         print("Дилер раздал карты");
         printHands();
 
-        if (player.getPoints() == 21) isGameStopped = true;
+        if (player.getPoints() == 21) {
+            isGameStopped = true;
+        }
     }
 
     /**
