@@ -76,6 +76,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Player</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<div class="block">A man at a table with a hand of cards class.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -88,7 +89,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E()" class="member-name-link">Player</a>()</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Constructs a Player with the specified name.</div>
+</div>
 </div>
 </section>
 </li>
@@ -105,19 +108,29 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Card.html" title="class in ru.nsu.anishchenko">Card</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCardFromDeck(ru.nsu.anishchenko.Deck)" class="member-name-link">getCardFromDeck</a><wbr>(<a href="Deck.html" title="class in ru.nsu.anishchenko">Deck</a>&nbsp;deck)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Get a card from the deck</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Card.html" title="class in ru.nsu.anishchenko">Card</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCardFromHand(int)" class="member-name-link">getCardFromHand</a><wbr>(int&nbsp;i)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Get card from hand.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPoints()" class="member-name-link">getPoints</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Get points.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStringOfHand()" class="member-name-link">getStringOfHand</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Structures the hand into a string form.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#recalculatePoints()" class="member-name-link">recalculatePoints</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Recalculate hand points.</div>
+</div>
 </div>
 </div>
 </div>
@@ -139,6 +152,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="&lt;init&gt;()">
 <h3>Player</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Player</span>()</div>
+<div class="block">Constructs a Player with the specified name.</div>
 </section>
 </li>
 </ul>
@@ -153,30 +167,55 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getCardFromDeck(ru.nsu.anishchenko.Deck)">
 <h3>getCardFromDeck</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Card.html" title="class in ru.nsu.anishchenko">Card</a></span>&nbsp;<span class="element-name">getCardFromDeck</span><wbr><span class="parameters">(<a href="Deck.html" title="class in ru.nsu.anishchenko">Deck</a>&nbsp;deck)</span></div>
+<div class="block">Get a card from the deck</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>deck</code> - deck from which you need to get a card</dd>
+<dt>Returns:</dt>
+<dd>card from deck</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getStringOfHand()">
 <h3>getStringOfHand</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getStringOfHand</span>()</div>
+<div class="block">Structures the hand into a string form.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>a string of the names of all the cards in the hand and player point.</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getCardFromHand(int)">
 <h3>getCardFromHand</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Card.html" title="class in ru.nsu.anishchenko">Card</a></span>&nbsp;<span class="element-name">getCardFromHand</span><wbr><span class="parameters">(int&nbsp;i)</span></div>
+<div class="block">Get card from hand.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>i</code> - card index</dd>
+<dt>Returns:</dt>
+<dd>card with index i from hand array</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="recalculatePoints()">
 <h3>recalculatePoints</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">recalculatePoints</span>()</div>
+<div class="block">Recalculate hand points.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="getPoints()">
 <h3>getPoints</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getPoints</span>()</div>
+<div class="block">Get points.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>points</dd>
+</dl>
 </section>
 </li>
 </ul>
