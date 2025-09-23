@@ -120,13 +120,14 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#startNewRound(ru.nsu.anishchenko.Deck)" class="member-name-link">startNewRound</a><wbr>(<a href="Deck.html" title="class in ru.nsu.anishchenko">Deck</a>&nbsp;newdeck)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>ru.nsu.anishchenko.Game.GameResult</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#startNewRound(ru.nsu.anishchenko.Deck,java.util.Scanner)" class="member-name-link">startNewRound</a><wbr>(<a href="Deck.html" title="class in ru.nsu.anishchenko">Deck</a>&nbsp;newdeck,
+ <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Scanner.html" title="class or interface in java.util" class="external-link">Scanner</a>&nbsp;scanner)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">New round of blackjack.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#startRoundWithDefaultDeck()" class="member-name-link">startRoundWithDefaultDeck</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>ru.nsu.anishchenko.Game.GameResult</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#startRoundWithDefaultDeck(java.util.Scanner)" class="member-name-link">startRoundWithDefaultDeck</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Scanner.html" title="class or interface in java.util" class="external-link">Scanner</a>&nbsp;scanner)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Start round with default shuffled deck.</div>
 </div>
@@ -163,9 +164,10 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="startNewRound(ru.nsu.anishchenko.Deck)">
+<section class="detail" id="startNewRound(ru.nsu.anishchenko.Deck,java.util.Scanner)">
 <h3>startNewRound</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">startNewRound</span><wbr><span class="parameters">(<a href="Deck.html" title="class in ru.nsu.anishchenko">Deck</a>&nbsp;newdeck)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">ru.nsu.anishchenko.Game.GameResult</span>&nbsp;<span class="element-name">startNewRound</span><wbr><span class="parameters">(<a href="Deck.html" title="class in ru.nsu.anishchenko">Deck</a>&nbsp;newdeck,
+ <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Scanner.html" title="class or interface in java.util" class="external-link">Scanner</a>&nbsp;scanner)</span></div>
 <div class="block">New round of blackjack.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -176,10 +178,14 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="startRoundWithDefaultDeck()">
+<section class="detail" id="startRoundWithDefaultDeck(java.util.Scanner)">
 <h3>startRoundWithDefaultDeck</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">startRoundWithDefaultDeck</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">ru.nsu.anishchenko.Game.GameResult</span>&nbsp;<span class="element-name">startRoundWithDefaultDeck</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Scanner.html" title="class or interface in java.util" class="external-link">Scanner</a>&nbsp;scanner)</span></div>
 <div class="block">Start round with default shuffled deck.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>did the player win</dd>
+</dl>
 </section>
 </li>
 </ul>
