@@ -86,12 +86,13 @@ public class Game {
      * Player's Turn.
      * The player get a card until he stops, win or lose.
      */
-    private void playerMove(Scanner scanner) {
+    private void playerMove() {
         if (isGameStopped) {
             return;
         }
 
         int msg;
+        Scanner scanner = new Scanner(System.in);
 
         print("\n--Ваш ход--");
         print("Введите \"1\", чтобы взять карту, и \"0\", чтобы остановиться...");

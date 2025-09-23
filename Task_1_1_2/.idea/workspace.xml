@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b8a42aa-a714-47c1-9da8-efc15aa68cb4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/anishchenko/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/anishchenko/Deck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/anishchenko/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/anishchenko/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/anishchenko/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/anishchenko/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +98,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Gradle.GameTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.nsu.anishchenko.Main" />
       <module name="Task_1_1_2.main" />
@@ -230,8 +226,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="Gradle.GameTest" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Gradle.Task_1_1_2 [testClasses]" />
         <item itemvalue="Gradle.Task_1_1_2 [build]" />
         <item itemvalue="Gradle.Task_1_1_2 [javadoc]" />
