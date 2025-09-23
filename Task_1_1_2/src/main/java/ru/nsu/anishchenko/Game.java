@@ -28,6 +28,7 @@ public class Game {
      * New round of blackjack.
      *
      * @param newdeck game deck
+     * @param scanner scanner
      * @return did the player win
      */
     public GameResult startNewRound(Deck newdeck, Scanner scanner) {
