@@ -73,7 +73,7 @@ public class Player {
     /**
      * Recalculate hand points.
      */
-    public void recalculatePoints() {
+    private void recalculatePoints() {
         int newPoints = 0;
         ArrayList<Card> aces = new ArrayList<>();
 

@@ -86,12 +86,11 @@ public class Game {
      * Player's Turn.
      * The player get a card until he stops, win or lose.
      */
-    private void playerMove() {
+    private void playerMove(Scanner scanner) {
         if (isGameStopped) {
             return;
         }
 
-        Scanner scanner = new Scanner(System.in);
         int msg;
 
         print("\n--Ваш ход--");

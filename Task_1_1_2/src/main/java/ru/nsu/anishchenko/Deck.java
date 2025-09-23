@@ -11,10 +11,6 @@ public class Deck {
      * Array of cards.
      */
     public ArrayList<Card> cards = new ArrayList<>();
-    /**
-     * Number of cards in the deck.
-     */
-    public int numOfCards = 0;
 
     /**
      * Clear deck and add all types of card.
@@ -42,7 +38,6 @@ public class Deck {
      * @param card card which need to add
      */
     public void addCard(Card card) {
-        numOfCards++;
         cards.add(card);
     }
 
@@ -52,12 +47,10 @@ public class Deck {
      * @return last card in deck array
      */
     public Card getCard() {
-        if (numOfCards == 0) {
+        if (cards.isEmpty()) {
             fillDeck();
         }
 
-        numOfCards--;
-
-        return cards.remove(cards.size() - 1);
+        return cards.removeLast();
     }
 }
