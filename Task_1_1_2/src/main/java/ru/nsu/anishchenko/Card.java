@@ -78,7 +78,7 @@ public class Card {
         }
 
         /**
-         * Set new cost
+         * Set new cost.
          *
          * @param newCost new card cost
          */
