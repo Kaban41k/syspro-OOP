@@ -30,7 +30,7 @@ public class Game {
      * @param newdeck game deck
      * @return did the player win
      */
-    public boolean startNewRound(Deck newdeck) {
+    public GameResult startNewRound(Deck newdeck, Scanner scanner) {
         isGameStopped = false;
 
         deck = newdeck;
@@ -41,7 +41,7 @@ public class Game {
         print("-".repeat(10) + " Раунд " + roundN + " " + "-".repeat(10));
 
         dealCards();
-        playerMove();
+        playerMove(scanner);
         dealerMove();
 
         return endRound();
@@ -50,13 +50,15 @@ public class Game {
 
     /**
      * Start round with default shuffled deck.
+     *
+     * @return did the player win
      */
-    public boolean startRoundWithDefaultDeck() {
+    public GameResult startRoundWithDefaultDeck(Scanner scanner) {
         Deck defaultDeck = new Deck();
         defaultDeck.fillDeck();
         defaultDeck.shuffle();
 
-        return startNewRound(defaultDeck);
+        return startNewRound(defaultDeck, scanner);
     }
 
     /**
@@ -86,13 +88,12 @@ public class Game {
      * Player's Turn.
      * The player get a card until he stops, win or lose.
      */
-    private void playerMove() {
+    private void playerMove(Scanner scanner) {
         if (isGameStopped) {
             return;
         }
 
         int msg;
-        Scanner scanner = new Scanner(System.in);
 
         print("\n--Ваш ход--");
         print("Введите \"1\", чтобы взять карту, и \"0\", чтобы остановиться...");
@@ -144,26 +145,47 @@ public class Game {
      *
      * @return did the player win
      */
-    private boolean endRound() {
+    private GameResult endRound() {
         isGameStopped = true;
         roundN++;
 
-        boolean result;
+        GameResult result;
 
         print("");
 
         if (player.getPoints() > 21 || dealer.getPoints() <= 21 && player.getPoints() < dealer.getPoints()) {
-            print("Дилер выиграл раунд!");
+            print(GameResult.PLAYERLOSE.getResult());
             dealerPoints++;
-            result = false;
-        } else {
-            print("Вы выиграли раунд!");
+            result = GameResult.PLAYERLOSE;
+        } else if (player.getPoints() == 21 || player.getPoints() <= 21 && player.getPoints() > dealer.getPoints()) {
+            print(GameResult.PLAYERWIN.getResult());
             playerPoints++;
-            result = true;
+            result = GameResult.PLAYERWIN;
+        } else {
+            print(GameResult.DRAW.getResult());
+            playerPoints++;
+            dealerPoints++;
+            result = GameResult.DRAW;
         }
 
         print("Счёт " + playerPoints + ":" + dealerPoints);
         return result;
+    }
+
+    enum GameResult {
+        PLAYERWIN("Вы выиграли раунд!"),
+        PLAYERLOSE("Дилер выиграл раунд!"),
+        DRAW("Ничья!");
+
+        private final String result;
+
+        public String getResult() {
+            return result;
+        }
+
+        GameResult(String result) {
+            this.result = result;
+        }
     }
 
     /**

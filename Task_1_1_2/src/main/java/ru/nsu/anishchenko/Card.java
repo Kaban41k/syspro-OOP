@@ -1,5 +1,7 @@
 package ru.nsu.anishchenko;
 
+import java.util.Random;
+
 /**
  * Card class.
  */
@@ -16,8 +18,6 @@ public class Card {
      */
     public CardSuit suit;
 
-    private int cost;
-
     /**
      * Hide card name in getName if true.
      */
@@ -32,40 +32,19 @@ public class Card {
     public Card(CardRank newRank, CardSuit newSuit) {
         rank = newRank;
         suit = newSuit;
-        cost = Math.min(rank.ordinal() + 1, 10);
-    }
-
-    /**
-     * Return full card info.
-     *
-     * @return card rank, suit, cost
-     */
-    public String getName() {
-        if (!isHidden) {
-            return rank.getRank() + " " + suit.getSuit() + " (" + cost + ")";
-        }
-        return "<(закрытая карта)>";
     }
 
     /**
      * Return full card info.
      * Rank suit (cost)
      *
-     * @param newCost new card cost
+     * @return card rank, suit, cost
      */
-    public void setCost(int newCost) {
-        if (MINCOST <= newCost && newCost <= MAXCOST) {
-            cost = newCost;
+    public String getName() {
+        if (!isHidden) {
+            return rank.getRank() + " " + suit.getSuit() + " (" + rank.getCost() + ")";
         }
-    }
-
-    /**
-     * Return card cost.
-     *
-     * @return cost
-     */
-    public int getCost() {
-        return cost;
+        return "<(закрытая карта)>";
     }
 
     /**
@@ -77,28 +56,50 @@ public class Card {
     }
 
     enum CardRank {
-        ACE("Туз"),
-        TWO("Двойка"),
-        THREE("Тройка"),
-        FOUR("Четвёрка"),
-        FIVE("Пятёрка"),
-        SIX("Шестёрка"),
-        SEVEN("Семёрка"),
-        EIGHT("Восьмёрка"),
-        NINE("Девятка"),
-        TEN("Десятка"),
-        JACK("Валет"),
-        QUEEN("Королева"),
-        KING("Король");
+        ACE("Туз", 1),
+        TWO("Двойка", 2),
+        THREE("Тройка", 3),
+        FOUR("Четвёрка", 4),
+        FIVE("Пятёрка", 5),
+        SIX("Шестёрка", 6),
+        SEVEN("Семёрка", 7),
+        EIGHT("Восьмёрка", 8),
+        NINE("Девятка", 9),
+        TEN("Десятка", 10),
+        JACK("Валет", 10),
+        QUEEN("Королева", 10),
+        KING("Король", 10);
 
         private final String rank;
+        public int cost;
 
         public String getRank() {
             return rank;
         }
 
-        CardRank(String rank) {
+        /**
+         * Set new cost
+         *
+         * @param newCost new card cost
+         */
+        public void setCost(int newCost) {
+            if (MINCOST <= newCost && newCost <= MAXCOST) {
+                this.cost = newCost;
+            }
+        }
+
+        /**
+         * Return card cost.
+         *
+         * @return cost
+         */
+        public int getCost() {
+            return this.cost;
+        }
+
+        CardRank(String rank, int cost) {
             this.rank = rank;
+            this.cost = cost;
         }
     }
 

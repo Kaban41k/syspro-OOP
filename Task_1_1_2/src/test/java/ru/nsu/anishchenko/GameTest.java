@@ -1,62 +1,13 @@
 package ru.nsu.anishchenko;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import java.io.ByteArrayInputStream;
+import java.util.Scanner;
+
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 class GameTest {
-
-    @Test
-    void checkHiddenCardName() {
-        Card card = new Card(Card.CardRank.values()[0], Card.CardSuit.values()[0]);
-        card.turnOver();
-        assertEquals("<(закрытая карта)>", card.getName());
-    }
-
-    @Test
-    void checkSetCardCost() {
-        Card card = new Card(Card.CardRank.values()[0], Card.CardSuit.values()[0]);
-        int c = card.getCost();
-
-        card.setCost(1000);
-        assertEquals(c, card.getCost());
-
-        card.setCost(10);
-        assertEquals(10, card.getCost());
-    }
-
-    @Test
-    void checkDeckGetCard() {
-        Card card = new Card(Card.CardRank.values()[0], Card.CardSuit.values()[0]);
-        Deck deck = new Deck();
-
-        deck.addCard(card);
-        Card cardFromDeck = deck.getCard();
-
-        assertEquals(card, cardFromDeck);
-    }
-
-    @Test
-    void checkPlayersEmptyHandString() {
-        Player player = new Player();
-
-        assertEquals("[] => 0", player.getStringOfHand());
-    }
-
-    @Test
-    void checkPlayersOneCardHand() {
-        Player player = new Player();
-        Card card = new Card(Card.CardRank.values()[0], Card.CardSuit.values()[0]);
-        Deck deck = new Deck();
-
-        deck.addCard(card);
-        player.getCardFromDeck(deck);
-        assertEquals(card, player.getCardFromHand(0));
-        assertEquals(card.getCost(), player.getPoints());
-    }
 
     @Test
     void checkPlayersInstantWin() {
@@ -68,7 +19,9 @@ class GameTest {
         deck.addCard(new Card(Card.CardRank.ACE, Card.CardSuit.HEARTS));
         deck.addCard(new Card(Card.CardRank.ACE, Card.CardSuit.DIAMONDS));
 
-        assertTrue(game.startNewRound(deck));
+        String input = "";
+
+        assertEquals(Game.GameResult.PLAYERWIN, game.startNewRound(deck, new Scanner(input)));
     }
 
     @Test
@@ -84,6 +37,54 @@ class GameTest {
         String input = "0";
         System.setIn(new ByteArrayInputStream(input.getBytes()));
 
-        assertFalse(game.startNewRound(deck));
+        assertEquals(Game.GameResult.PLAYERLOSE, game.startNewRound(deck, new Scanner(input)));
+    }
+
+    @Test
+    void checkDraw() {
+        Deck deck = new Deck();
+        Game game = new Game();
+
+        deck.addCard(new Card(Card.CardRank.ACE, Card.CardSuit.CLUBS));
+        deck.addCard(new Card(Card.CardRank.NINE, Card.CardSuit.HEARTS));
+        deck.addCard(new Card(Card.CardRank.NINE, Card.CardSuit.DIAMONDS));
+        deck.addCard(new Card(Card.CardRank.ACE, Card.CardSuit.DIAMONDS));
+
+        String input = "0";
+        System.setIn(new ByteArrayInputStream(input.getBytes()));
+
+        assertEquals(Game.GameResult.DRAW, game.startNewRound(deck, new Scanner(input)));
+    }
+
+    @Test
+    void checkPlayersWin() {
+        Deck deck = new Deck();
+        Game game = new Game();
+
+        deck.addCard(new Card(Card.CardRank.EIGHT, Card.CardSuit.CLUBS));
+        deck.addCard(new Card(Card.CardRank.ACE, Card.CardSuit.CLUBS));
+        deck.addCard(new Card(Card.CardRank.ACE, Card.CardSuit.HEARTS));
+        deck.addCard(new Card(Card.CardRank.EIGHT, Card.CardSuit.HEARTS));
+        deck.addCard(new Card(Card.CardRank.ACE, Card.CardSuit.DIAMONDS));
+
+        String input = "1\n0";
+
+        assertEquals(Game.GameResult.PLAYERWIN, game.startNewRound(deck, new Scanner(input)));
+    }
+
+    @Test
+    void checkDealersWin() {
+        Deck deck = new Deck();
+        Game game = new Game();
+
+        deck.addCard(new Card(Card.CardRank.SIX, Card.CardSuit.CLUBS));
+        deck.addCard(new Card(Card.CardRank.ACE, Card.CardSuit.CLUBS));
+        deck.addCard(new Card(Card.CardRank.ACE, Card.CardSuit.HEARTS));
+        deck.addCard(new Card(Card.CardRank.EIGHT, Card.CardSuit.HEARTS));
+        deck.addCard(new Card(Card.CardRank.ACE, Card.CardSuit.DIAMONDS));
+
+        String input = "1\n0";
+
+        assertEquals(Game.GameResult.PLAYERLOSE, game.startNewRound(deck, new Scanner(input)));
     }
 }

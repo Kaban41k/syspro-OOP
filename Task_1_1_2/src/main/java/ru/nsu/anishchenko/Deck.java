@@ -10,7 +10,14 @@ public class Deck {
     /**
      * Array of cards.
      */
-    public ArrayList<Card> cards = new ArrayList<>();
+    public ArrayList<Card> cards;
+
+    /**
+     * Init cards array.
+     */
+    public Deck() {
+        cards = new ArrayList<>();
+    }
 
     /**
      * Clear deck and add all types of card.

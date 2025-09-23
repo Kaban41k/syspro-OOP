@@ -11,7 +11,7 @@ public class Player {
     private int points;
 
     /**
-     * Constructs a Player with the specified name.
+     * Init hand and points.
      */
     public Player() {
         hand = new ArrayList<>();
@@ -83,16 +83,16 @@ public class Player {
                 continue;
             }
 
-            newPoints += card.getCost();
+            newPoints += card.rank.getCost();
         }
 
         for (Card ace : aces) {
             if (newPoints <= 10) {
                 newPoints += 11;
-                ace.setCost(11);
+                ace.rank.setCost(11);
             } else {
                 newPoints += 1;
-                ace.setCost(1);
+                ace.rank.setCost(1);
             }
         }
 
