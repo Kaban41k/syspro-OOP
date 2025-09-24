@@ -29,7 +29,7 @@ public class Game {
      *
      * @param newdeck game deck
      * @param scanner scanner
-     * @return did the player win
+     * @return game result
      */
     public GameResult startNewRound(Deck newdeck, Scanner scanner) {
         isGameStopped = false;
@@ -52,7 +52,7 @@ public class Game {
     /**
      * Start round with default shuffled deck.
      *
-     * @return did the player win
+     * @return game result
      */
     public GameResult startRoundWithDefaultDeck(Scanner scanner) {
         Deck defaultDeck = new Deck();
@@ -144,7 +144,7 @@ public class Game {
     /**
      * Stop the round and determine the winner.
      *
-     * @return did the player win
+     * @return game result
      */
     private GameResult endRound() {
         isGameStopped = true;

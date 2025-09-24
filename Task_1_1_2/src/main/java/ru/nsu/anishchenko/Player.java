@@ -11,7 +11,7 @@ public class Player {
     private int points;
 
     /**
-     * Init hand and points.
+     * Init private variables.
      */
     public Player() {
         hand = new ArrayList<>();
