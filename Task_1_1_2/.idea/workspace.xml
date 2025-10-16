@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b8a42aa-a714-47c1-9da8-efc15aa68cb4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/anishchenko/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/anishchenko/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/anishchenko/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/anishchenko/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/nsu/anishchenko/DeckTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/nsu/anishchenko/DeckTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,15 +95,16 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "task-1-1-2",
+    "git-widget-placeholder": "task-1-2-1",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/kbn/dev/syspro/syspro-OOP/Task_1_1_2",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "preferences.editor"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.DeckTest">
+  <component name="RunManager" selected="Gradle.Tests in 'Task_1_1_2'">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.nsu.anishchenko.Main" />
       <module name="Task_1_2_1.main" />

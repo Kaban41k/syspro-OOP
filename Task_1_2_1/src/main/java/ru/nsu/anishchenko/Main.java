@@ -1,0 +1,9 @@
+package ru.nsu.anishchenko;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+    }
+}
