@@ -1,13 +1,17 @@
 package ru.nsu.anishchenko;
 
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
+
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
@@ -51,60 +55,60 @@ abstract class GraphTest {
     @Test
     void addEdgeTest() {
         graph = createGraph();
-        Graph.Node node_from = new Graph.Node();
-        Graph.Node node_to = new Graph.Node();
+        Graph.Node nodeFrom = new Graph.Node();
+        Graph.Node nodeTo = new Graph.Node();
 
-        graph.addNode(node_from);
-        graph.addNode(node_to);
+        graph.addNode(nodeFrom);
+        graph.addNode(nodeTo);
 
-        graph.addEdge(node_from, node_to);
+        graph.addEdge(nodeFrom, nodeTo);
 
-        assertEquals(graph.getEdges().getFirst().getFrom(), node_from);
-        assertEquals(graph.getEdges().getFirst().getTo(), node_to);
+        assertEquals(graph.getEdges().getFirst().getFrom(), nodeFrom);
+        assertEquals(graph.getEdges().getFirst().getTo(), nodeTo);
 
-        graph.addEdge(node_from, node_to);
+        graph.addEdge(nodeFrom, nodeTo);
 
         assertEquals(1, graph.getEdges().size());
 
-        Graph.Node another_node = new Graph.Node();
+        Graph.Node anotherNode = new Graph.Node();
 
-        assertThrows(IllegalArgumentException.class, () -> graph.deleteEdge(node_from, another_node));
+        assertThrows(IllegalArgumentException.class, () -> graph.deleteEdge(nodeFrom, anotherNode));
     }
 
     @Test
     void deleteEdgeTest() {
         graph = createGraph();
-        Graph.Node node_from = new Graph.Node();
-        Graph.Node node_to = new Graph.Node();
+        Graph.Node nodeFrom = new Graph.Node();
+        Graph.Node nodeTo = new Graph.Node();
 
-        graph.addNode(node_from);
-        graph.addNode(node_to);
+        graph.addNode(nodeFrom);
+        graph.addNode(nodeTo);
 
-        graph.addEdge(node_from, node_to);
+        graph.addEdge(nodeFrom, nodeTo);
 
-        graph.deleteEdge(node_from, node_to);
-
-        assertEquals(0, graph.getEdges().size());
-
-        graph.addEdge(node_from, node_to);
-        graph.deleteNode(node_from);
+        graph.deleteEdge(nodeFrom, nodeTo);
 
         assertEquals(0, graph.getEdges().size());
 
-        assertThrows(IllegalArgumentException.class, () -> graph.deleteEdge(node_from, node_to));
+        graph.addEdge(nodeFrom, nodeTo);
+        graph.deleteNode(nodeFrom);
+
+        assertEquals(0, graph.getEdges().size());
+
+        assertThrows(IllegalArgumentException.class, () -> graph.deleteEdge(nodeFrom, nodeTo));
     }
 
     @Test
     void twoElementStringTest() {
         graph = createGraph();
-        Graph.Node node_from = new Graph.Node();
-        Graph.Node node_to = new Graph.Node();
+        Graph.Node nodeFrom = new Graph.Node();
+        Graph.Node nodeTo = new Graph.Node();
 
-        graph.addNode(node_from);
-        graph.addNode(node_to);
+        graph.addNode(nodeFrom);
+        graph.addNode(nodeTo);
 
-        graph.addEdge(node_from, node_to);
-        graph.addEdge(node_to, node_from);
+        graph.addEdge(nodeFrom, nodeTo);
+        graph.addEdge(nodeTo, nodeFrom);
 
 
         assertEquals("1\n0", graph.toString());
@@ -113,18 +117,18 @@ abstract class GraphTest {
     @Test
     void twoElementNeighboursTest() {
         graph = createGraph();
-        Graph.Node node_from = new Graph.Node();
-        Graph.Node node_to = new Graph.Node();
+        Graph.Node nodeFrom = new Graph.Node();
+        Graph.Node nodeTo = new Graph.Node();
 
-        graph.addNode(node_from);
-        graph.addNode(node_to);
+        graph.addNode(nodeFrom);
+        graph.addNode(nodeTo);
 
-        graph.addEdge(node_from, node_to);
-        graph.addEdge(node_to, node_from);
+        graph.addEdge(nodeFrom, nodeTo);
+        graph.addEdge(nodeTo, nodeFrom);
 
 
-        assertEquals(node_to, graph.getNeighbours(node_from).getFirst());
-        assertEquals(node_from, graph.getNeighbours(node_to).getFirst());
+        assertEquals(nodeTo, graph.getNeighbours(nodeFrom).getFirst());
+        assertEquals(nodeFrom, graph.getNeighbours(nodeTo).getFirst());
     }
 
     @Test
@@ -178,12 +182,12 @@ abstract class GraphTest {
     void readFileTest() throws IOException {
         assertThrows(NullPointerException.class, () -> {graph.readFile("/1*(&@ (* #98q273 0_-098");});
 
-        Path testFile = tempDir.resolve("test.txt");
+        Path file = tempDir.resolve("test.txt");
         String content = "1\n2\n0\n";
-        Files.writeString(testFile, content);
+        Files.writeString(file, content);
 
         graph = createGraph();
-        graph.readFile(testFile.toString());
+        graph.readFile(file.toString());
 
         Graph graph2 = createGraph();
 
@@ -219,10 +223,10 @@ abstract class GraphTest {
         graph.addEdge(nodes.get(3), nodes.get(5));
         graph.addEdge(nodes.get(4), nodes.get(5));
 
-        List<Graph.Node> nodes_t = graph.topologicalSort();
+        List<Graph.Node> nodesT = graph.topologicalSort();
 
         for (int i = 0; i < 5; i++) {
-            assertTrue(nodes_t.indexOf(nodes.get(i)) < nodes_t.indexOf(nodes.get(i + 1)));
+            assertTrue(nodesT.indexOf(nodes.get(i)) < nodesT.indexOf(nodes.get(i + 1)));
         }
     }
 
