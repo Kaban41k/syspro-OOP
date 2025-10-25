@@ -1,11 +1,12 @@
 package ru.nsu.anishchenko;
 
 
-import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.ArrayList;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
+
 
 class AdjacencyMatrixGraphTest extends GraphTest {
     @Override
@@ -15,19 +16,19 @@ class AdjacencyMatrixGraphTest extends GraphTest {
 
     @Test
     void matrixSizeTest() {
-        int N = 4;
+        int n = 4;
         AdjacencyMatrixGraph graph = (AdjacencyMatrixGraph) createGraph();
 
-        for (int i = 0; i < N; i++) {
+        for (int i = 0; i < n; i++) {
             graph.addNode(new Graph.Node());
         }
 
         ArrayList<ArrayList<Boolean>> matrix = graph.getMatrix();
 
-        assertEquals(N, matrix.size());
+        assertEquals(n, matrix.size());
 
-        for (int i = 0; i < N; i++) {
-            assertEquals(N, matrix.get(i).size());
+        for (int i = 0; i < n; i++) {
+            assertEquals(n, matrix.get(i).size());
         }
     }
 }
