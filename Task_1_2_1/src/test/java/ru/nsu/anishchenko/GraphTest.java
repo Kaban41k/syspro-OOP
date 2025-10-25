@@ -1,17 +1,16 @@
 package ru.nsu.anishchenko;
 
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
-
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
@@ -161,17 +160,19 @@ abstract class GraphTest {
         Graph.Node node2 = new Graph.Node();
 
         AdjacencyListGraph alg = new AdjacencyListGraph();
-        AdjacencyMatrixGraph amg = new AdjacencyMatrixGraph();
-        IncidenceMatrixGraph img = new IncidenceMatrixGraph();
-
         alg.addNode(node1);
         alg.addNode(node2);
+        alg.addEdge(node1, node2);
 
+        AdjacencyMatrixGraph amg = new AdjacencyMatrixGraph();
         amg.addNode(node1);
         amg.addNode(node2);
+        amg.addEdge(node1, node2);
 
+        IncidenceMatrixGraph img = new IncidenceMatrixGraph();
         img.addNode(node1);
         img.addNode(node2);
+        img.addEdge(node1, node2);
 
         assertEquals(alg, amg);
         assertEquals(alg, img);
@@ -180,7 +181,7 @@ abstract class GraphTest {
 
     @Test
     void readFileTest() throws IOException {
-        assertThrows(NullPointerException.class, () -> {graph.readFile("/1*(&@ (* #98q273 0_-098");});
+        assertThrows(NullPointerException.class, () -> graph.readFile("/1*(&@ (* #98q273 0_-98"));
 
         Path file = tempDir.resolve("test.txt");
         String content = "1\n2\n0\n";
