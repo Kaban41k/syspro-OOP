@@ -30,6 +30,7 @@ public interface Graph {
 
         for (int i = 0; i < lines.size(); i++) {
             nodes.add(new Node());
+            addNode(nodes.get(i));
         }
 
         for (int i = 0; i < lines.size(); i++) {

@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b8a42aa-a714-47c1-9da8-efc15aa68cb4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/anishchenko/AdjacencyListGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/anishchenko/AdjacencyListGraph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/anishchenko/AdjacencyMatrixGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/anishchenko/AdjacencyMatrixGraph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/anishchenko/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/anishchenko/Graph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/nsu/anishchenko/IncidenceMatrixGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/nsu/anishchenko/IncidenceMatrixGraph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/nsu/anishchenko/AdjacencyMatrixGraphTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/nsu/anishchenko/AdjacencyMatrixGraphTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/nsu/anishchenko/GraphTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/nsu/anishchenko/GraphTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -132,31 +125,7 @@
       <recent name="ru.nsu.anishchenko" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.AdjacencyListGraphTest|AdjacencyMatrixGraphTest|IndenceMatrixGraphTest (1)">
-    <configuration name="AdjacencyListGraphTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;ru.nsu.anishchenko.AdjacencyListGraphTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Gradle.AdjacencyListGraphTest|AdjacencyMatrixGraphTest|IndenceMatrixGraphTest (5)">
     <configuration name="AdjacencyListGraphTest|AdjacencyMatrixGraphTest|IndenceMatrixGraphTest (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -185,7 +154,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="AdjacencyListGraphTest|AdjacencyMatrixGraphTest|IndenceMatrixGraphTest (2)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="AdjacencyListGraphTest|AdjacencyMatrixGraphTest|IndenceMatrixGraphTest (3)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -213,7 +182,35 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="AdjacencyListGraphTest|AdjacencyMatrixGraphTest|IndenceMatrixGraphTest (3)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="AdjacencyListGraphTest|AdjacencyMatrixGraphTest|IndenceMatrixGraphTest (4)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ru.nsu.anishchenko.AdjacencyListGraphTest&quot;" />
+            <option value="--tests" />
+            <option value="&quot;ru.nsu.anishchenko.AdjacencyMatrixGraphTest&quot;" />
+            <option value="--tests" />
+            <option value="&quot;ru.nsu.anishchenko.IndenceMatrixGraphTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="AdjacencyListGraphTest|AdjacencyMatrixGraphTest|IndenceMatrixGraphTest (5)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -295,17 +292,17 @@
       <item itemvalue="Gradle.Tests in 'Task_1_2_1'" />
       <item itemvalue="Gradle.AdjacencyListGraphTest|AdjacencyMatrixGraphTest|IndenceMatrixGraphTest" />
       <item itemvalue="Gradle.AdjacencyListGraphTest|AdjacencyMatrixGraphTest|IndenceMatrixGraphTest (1)" />
-      <item itemvalue="Gradle.AdjacencyListGraphTest|AdjacencyMatrixGraphTest|IndenceMatrixGraphTest (2)" />
       <item itemvalue="Gradle.AdjacencyListGraphTest|AdjacencyMatrixGraphTest|IndenceMatrixGraphTest (3)" />
-      <item itemvalue="Gradle.AdjacencyListGraphTest" />
+      <item itemvalue="Gradle.AdjacencyListGraphTest|AdjacencyMatrixGraphTest|IndenceMatrixGraphTest (4)" />
+      <item itemvalue="Gradle.AdjacencyListGraphTest|AdjacencyMatrixGraphTest|IndenceMatrixGraphTest (5)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.AdjacencyListGraphTest|AdjacencyMatrixGraphTest|IndenceMatrixGraphTest (5)" />
         <item itemvalue="Gradle.AdjacencyListGraphTest|AdjacencyMatrixGraphTest|IndenceMatrixGraphTest (1)" />
-        <item itemvalue="Gradle.AdjacencyListGraphTest" />
+        <item itemvalue="Gradle.AdjacencyListGraphTest|AdjacencyMatrixGraphTest|IndenceMatrixGraphTest (4)" />
         <item itemvalue="Gradle.AdjacencyListGraphTest|AdjacencyMatrixGraphTest|IndenceMatrixGraphTest" />
         <item itemvalue="Gradle.AdjacencyListGraphTest|AdjacencyMatrixGraphTest|IndenceMatrixGraphTest (3)" />
-        <item itemvalue="Gradle.AdjacencyListGraphTest|AdjacencyMatrixGraphTest|IndenceMatrixGraphTest (2)" />
       </list>
     </recent_temporary>
   </component>

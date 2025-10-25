@@ -1,7 +1,11 @@
 package ru.nsu.anishchenko;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.io.TempDir;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,6 +13,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 abstract class GraphTest {
     protected Graph graph;
+
+    @TempDir
+    Path tempDir;
 
     protected abstract Graph createGraph();
 
@@ -163,6 +170,32 @@ abstract class GraphTest {
         assertEquals(alg, amg);
         assertEquals(alg, img);
         assertEquals(amg, img);
+    }
+
+    @Test
+    void readFileTest() throws IOException {
+        assertThrows(NullPointerException.class, () -> {graph.readFile("/1*(&@ (* #98q273 0_-098");});
+
+        Path testFile = tempDir.resolve("test.txt");
+        String content = "1\n2\n0\n";
+        Files.writeString(testFile, content);
+
+        graph = createGraph();
+        graph.readFile(testFile.toString());
+
+        Graph graph2 = createGraph();
+
+        ArrayList<Graph.Node> nodes = graph.getNodes();
+
+        graph2.addNode(nodes.get(0));
+        graph2.addNode(nodes.get(1));
+        graph2.addNode(nodes.get(2));
+
+        graph2.addEdge(nodes.get(0), nodes.get(1));
+        graph2.addEdge(nodes.get(1), nodes.get(2));
+        graph2.addEdge(nodes.get(2), nodes.get(0));
+
+        assertEquals(graph, graph2);
     }
 
     @Test
