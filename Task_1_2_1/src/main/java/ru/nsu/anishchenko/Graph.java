@@ -1,6 +1,5 @@
 package ru.nsu.anishchenko;
 
-import java.awt.*;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -132,11 +131,11 @@ public interface Graph {
             }
 
             while (!stack.empty()) {
-                Node peeked_node = stack.peek();
+                Node peekedNode = stack.peek();
 
-                if (flags.get(peeked_node) == 0) {
-                    flags.put(peeked_node, 1);
-                    ArrayList<Node> neighbours = getNeighbours(peeked_node);
+                if (flags.get(peekedNode) == 0) {
+                    flags.put(peekedNode, 1);
+                    ArrayList<Node> neighbours = getNeighbours(peekedNode);
 
                     for (Node neighbour : neighbours) {
                         if (flags.get(neighbour) == 0) {
@@ -147,10 +146,10 @@ public interface Graph {
                             break;
                         }
                     }
-                } else if (flags.get(peeked_node) == 1) {
+                } else if (flags.get(peekedNode) == 1) {
                     stack.pop();
-                    flags.put(peeked_node, 2);
-                    res.add(peeked_node);
+                    flags.put(peekedNode, 2);
+                    res.add(peekedNode);
                 }
             }
         }
@@ -175,11 +174,11 @@ public interface Graph {
 
         @Override
         public boolean equals(Object obj) {
-            if (!(obj instanceof Edge another_edge)) {
+            if (!(obj instanceof Edge anotherEdge)) {
                 return false;
             }
 
-            return from.equals(another_edge.getFrom()) && to.equals(another_edge.getTo());
+            return from.equals(anotherEdge.getFrom()) && to.equals(anotherEdge.getTo());
         }
 
         /**

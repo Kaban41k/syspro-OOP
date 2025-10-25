@@ -60,7 +60,7 @@ public class AdjacencyListGraph implements Graph {
     }
 
     @Override
-    public void deleteEdge(Node from, Node to) throws IllegalArgumentException{
+    public void deleteEdge(Node from, Node to) throws IllegalArgumentException {
         if (!nodes.contains(from) || !nodes.contains(to)) {
             throw new IllegalArgumentException("Node is not in graph");
         }

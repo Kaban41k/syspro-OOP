@@ -54,7 +54,7 @@ public class IncidenceMatrixGraph implements Graph {
     }
 
     @Override
-    public void addEdge(Node from, Node to) throws IllegalArgumentException{
+    public void addEdge(Node from, Node to) throws IllegalArgumentException {
         if (!nodes.contains(from) || !nodes.contains(to)) {
             throw new IllegalArgumentException("Node is not in graph");
         }
@@ -78,13 +78,14 @@ public class IncidenceMatrixGraph implements Graph {
     }
 
     @Override
-    public void deleteEdge(Node from, Node to) throws IllegalArgumentException{
+    public void deleteEdge(Node from, Node to) throws IllegalArgumentException {
         if (!nodes.contains(from) || !nodes.contains(to)) {
             throw new IllegalArgumentException("Node is not in graph");
         }
 
         for (int i = 0; i < matrix.size(); i++) {
-            if (matrix.get(i).get(nodes.indexOf(from)) == 1 && matrix.get(i).get(nodes.indexOf(to)) == -1) {
+            if (matrix.get(i).get(nodes.indexOf(from)) == 1 &&
+                    matrix.get(i).get(nodes.indexOf(to)) == -1) {
                 matrix.remove(i);
                 return;
             }
@@ -102,12 +103,16 @@ public class IncidenceMatrixGraph implements Graph {
             for (int j = 0; j < integers.size(); j++) {
                 if (integers.get(j) == 1) {
                     from = nodes.get(j);
-                    if (to != null) break;
+                    if (to != null) {
+                        break;
+                    }
                 }
 
                 if (integers.get(j) == -1) {
                     to = nodes.get(j);
-                    if (from != null) break;
+                    if (from != null) {
+                        break;
+                    }
                 }
             }
 
@@ -170,7 +175,9 @@ public class IncidenceMatrixGraph implements Graph {
         StringBuilder res = new StringBuilder();
 
         for (int from = 0; from < nodes.size(); from++) {
-            if (from != 0) res.append("\n");
+            if (from != 0) {
+                res.append("\n");
+            }
             boolean firstNeighbour = true;
 
             for (ArrayList<Integer> integers : matrix) {
