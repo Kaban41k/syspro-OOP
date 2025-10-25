@@ -29,10 +29,10 @@ public class AdjacencyListGraph implements Graph {
             list.remove(node);
         }
 
-        int node_index = nodes.indexOf(node);
+        int nodeIndex = nodes.indexOf(node);
 
-        nodes.remove(node_index);
-        lists.remove(node_index);
+        nodes.remove(nodeIndex);
+        lists.remove(nodeIndex);
     }
 
     @Override
@@ -46,17 +46,17 @@ public class AdjacencyListGraph implements Graph {
             throw new IllegalArgumentException("Node is not in graph");
         }
 
-        Edge edge_current = new Edge(from, to);
+        Edge edgeCurrent = new Edge(from, to);
 
         for (Edge edge : getEdges()) {
-            if (edge.equals(edge_current)) {
+            if (edge.equals(edgeCurrent)) {
                 return;
             }
         }
 
-        int from_index = nodes.indexOf(from);
+        int fromIndex = nodes.indexOf(from);
 
-        lists.get(from_index).add(to);
+        lists.get(fromIndex).add(to);
     }
 
     @Override
@@ -65,9 +65,9 @@ public class AdjacencyListGraph implements Graph {
             throw new IllegalArgumentException("Node is not in graph");
         }
 
-        int from_index = nodes.indexOf(from);
+        int fromIndex = nodes.indexOf(from);
 
-        lists.get(from_index).remove(to);
+        lists.get(fromIndex).remove(to);
     }
 
     @Override
@@ -100,19 +100,19 @@ public class AdjacencyListGraph implements Graph {
 
     @Override
     public boolean equals(Object obj) {
-        if (!(obj instanceof Graph another_graph)) {
+        if (!(obj instanceof Graph anotherGraph)) {
             return false;
         }
 
-        ArrayList<Node> nodes_this = getNodes();
-        ArrayList<Node> nodes_other = another_graph.getNodes();
-        if (!nodes_this.equals(nodes_other)) {
+        ArrayList<Node> nodesThis = getNodes();
+        ArrayList<Node> nodesOther = anotherGraph.getNodes();
+        if (!nodesThis.equals(nodesOther)) {
             return false;
         }
 
-        ArrayList<Edge> edges_this = getEdges();
-        ArrayList<Edge> edges_other = another_graph.getEdges();
-        if (!edges_this.equals(edges_other)) {
+        ArrayList<Edge> edgesThis = getEdges();
+        ArrayList<Edge> edgesOther = anotherGraph.getEdges();
+        if (!edgesThis.equals(edgesOther)) {
             return false;
         }
 
@@ -127,7 +127,9 @@ public class AdjacencyListGraph implements Graph {
             if (from != 0) res.append("\n");
 
             for (int to = 0; to < lists.get(from).size(); to++) {
-                if (to != 0) res.append(" ");
+                if (to != 0) {
+                    res.append(" ");
+                }
 
                 res.append(nodes.indexOf(lists.get(from).get(to)));
             }

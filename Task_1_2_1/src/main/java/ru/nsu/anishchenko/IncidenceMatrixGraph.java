@@ -28,14 +28,14 @@ public class IncidenceMatrixGraph implements Graph {
             throw new IllegalArgumentException("Node is not in graph");
         }
 
-        int node_index = nodes.indexOf(node);
+        int nodeIndex = nodes.indexOf(node);
 
-        nodes.remove(node_index);
+        nodes.remove(nodeIndex);
 
         int i = 0;
 
         while (i < matrix.size()) {
-            if (matrix.get(i).get(node_index) != 0) {
+            if (matrix.get(i).get(nodeIndex) != 0) {
                 matrix.remove(i);
                 continue;
             }
@@ -44,7 +44,7 @@ public class IncidenceMatrixGraph implements Graph {
         }
 
         for (ArrayList<Integer> list : matrix) {
-            list.remove(node_index);
+            list.remove(nodeIndex);
         }
     }
 
@@ -59,10 +59,10 @@ public class IncidenceMatrixGraph implements Graph {
             throw new IllegalArgumentException("Node is not in graph");
         }
 
-        Edge edge_current = new Edge(from, to);
+        Edge edgeCurrent = new Edge(from, to);
 
         for (Edge edge : getEdges()) {
-            if (edge.equals(edge_current)) {
+            if (edge.equals(edgeCurrent)) {
                 return;
             }
         }
@@ -125,10 +125,10 @@ public class IncidenceMatrixGraph implements Graph {
 
         ArrayList<Node> res = new ArrayList<>();
 
-        int node_index = nodes.indexOf(node);
+        int nodeIndex = nodes.indexOf(node);
 
         for (ArrayList<Integer> integers : matrix) {
-            if (integers.get(node_index) != 1) {
+            if (integers.get(nodeIndex) != 1) {
                 continue;
             }
 
@@ -150,23 +150,19 @@ public class IncidenceMatrixGraph implements Graph {
 
     @Override
     public boolean equals(Object obj) {
-        if (!(obj instanceof Graph another_graph)) {
+        if (!(obj instanceof Graph anotherGraph)) {
             return false;
         }
 
-        ArrayList<Node> nodes_this = getNodes();
-        ArrayList<Node> nodes_other = another_graph.getNodes();
-        if (!nodes_this.equals(nodes_other)) {
+        ArrayList<Node> nodesThis = getNodes();
+        ArrayList<Node> nodesOther = anotherGraph.getNodes();
+        if (!nodesThis.equals(nodesOther)) {
             return false;
         }
 
-        ArrayList<Edge> edges_this = getEdges();
-        ArrayList<Edge> edges_other = another_graph.getEdges();
-        if (!edges_this.equals(edges_other)) {
-            return false;
-        }
-
-        return true;
+        ArrayList<Edge> edgesThis = getEdges();
+        ArrayList<Edge> edgesOther = anotherGraph.getEdges();
+        return edgesThis.equals(edgesOther);
     }
 
     @Override
@@ -184,7 +180,9 @@ public class IncidenceMatrixGraph implements Graph {
 
                 for (int j = 0; j < integers.size(); j++) {
                     if (integers.get(j) == -1) {
-                        if (!firstNeighbour) res.append(" ");
+                        if (!firstNeighbour) {
+                            res.append(" ");
+                        }
 
                         res.append(j);
                         firstNeighbour = false;

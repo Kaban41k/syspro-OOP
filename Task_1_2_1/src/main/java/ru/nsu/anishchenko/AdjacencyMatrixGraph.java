@@ -33,13 +33,13 @@ public class AdjacencyMatrixGraph implements Graph {
             throw new IllegalArgumentException("Node is not in graph");
         }
 
-        int node_index = nodes.indexOf(node);
+        int nodeIndex = nodes.indexOf(node);
 
-        nodes.remove(node_index);
-        matrix.remove(node_index);
+        nodes.remove(nodeIndex);
+        matrix.remove(nodeIndex);
 
         for (ArrayList<Boolean> arr : matrix) {
-            arr.remove(node_index);
+            arr.remove(nodeIndex);
         }
     }
 
@@ -148,7 +148,9 @@ public class AdjacencyMatrixGraph implements Graph {
 
             for (int to = 0; to < matrix.size(); to++) {
                 if (matrix.get(from).get(to)) {
-                    if (!firstNeighbour) res.append(" ");
+                    if (!firstNeighbour) {
+                        res.append(" ");
+                    }
 
                     res.append(to);
                     firstNeighbour = false;
