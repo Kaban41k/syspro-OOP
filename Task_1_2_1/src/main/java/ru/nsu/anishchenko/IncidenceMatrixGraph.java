@@ -8,6 +8,10 @@ public class IncidenceMatrixGraph implements Graph {
 
     @Override
     public void addNode(Node node) {
+        if (nodes.contains(node)) {
+            return;
+        }
+
         nodes.add(node);
 
         for (ArrayList<Integer> list : matrix) {
@@ -16,7 +20,11 @@ public class IncidenceMatrixGraph implements Graph {
     }
 
     @Override
-    public void deleteNode(Node node) {
+    public void deleteNode(Node node) throws IllegalArgumentException {
+        if (!nodes.contains(node)) {
+            throw new IllegalArgumentException("Node is not in graph");
+        }
+
         int node_index = nodes.indexOf(node);
 
         nodes.remove(node_index);
@@ -44,6 +52,18 @@ public class IncidenceMatrixGraph implements Graph {
 
     @Override
     public void addEdge(Node from, Node to) {
+        if (!nodes.contains(from) || !nodes.contains(to)) {
+            throw new IllegalArgumentException("Node is not in graph");
+        }
+
+        Edge edge_current = new Edge(from, to);
+
+        for (Edge edge : getEdges()) {
+            if (edge.equals(edge_current)) {
+                return;
+            }
+        }
+
         matrix.add(new ArrayList<>());
 
         for (int i = 0; i < nodes.size(); i++) {
@@ -56,6 +76,10 @@ public class IncidenceMatrixGraph implements Graph {
 
     @Override
     public void deleteEdge(Node from, Node to) {
+        if (!nodes.contains(from) || !nodes.contains(to)) {
+            throw new IllegalArgumentException("Node is not in graph");
+        }
+
         for (int i = 0; i < matrix.size(); i++) {
             if (matrix.get(i).get(nodes.indexOf(from)) == 1 && matrix.get(i).get(nodes.indexOf(to)) == -1) {
                 matrix.remove(i);
@@ -115,6 +139,27 @@ public class IncidenceMatrixGraph implements Graph {
     public void clear() {
         nodes.clear();
         matrix.clear();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof Graph another_graph)) {
+            return false;
+        }
+
+        ArrayList<Node> nodes_this = getNodes();
+        ArrayList<Node> nodes_other = another_graph.getNodes();
+        if (!nodes_this.equals(nodes_other)) {
+            return false;
+        }
+
+        ArrayList<Edge> edges_this = getEdges();
+        ArrayList<Edge> edges_other = another_graph.getEdges();
+        if (!edges_this.equals(edges_other)) {
+            return false;
+        }
+
+        return true;
     }
 
     @Override
