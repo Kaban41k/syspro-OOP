@@ -90,6 +90,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">Graph</span></div>
+<div class="block">Graph interface.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -104,10 +105,14 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>static class&nbsp;</code></div>
 <div class="col-second even-row-color"><code><a href="Graph.Edge.html" class="type-name-link" title="class in ru.nsu.anishchenko">Graph.Edge</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Graph Edge class.</div>
+</div>
 <div class="col-first odd-row-color"><code>static class&nbsp;</code></div>
 <div class="col-second odd-row-color"><code><a href="Graph.Node.html" class="type-name-link" title="class in ru.nsu.anishchenko">Graph.Node</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Graph Node class.</div>
+</div>
 </div>
 </section>
 </li>
@@ -125,41 +130,55 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#addEdge(ru.nsu.anishchenko.Graph.Node,ru.nsu.anishchenko.Graph.Node)" class="member-name-link">addEdge</a><wbr>(<a href="Graph.Node.html" title="class in ru.nsu.anishchenko">Graph.Node</a>&nbsp;from,
  <a href="Graph.Node.html" title="class in ru.nsu.anishchenko">Graph.Node</a>&nbsp;to)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Add directed edge from <code>from</code> to <code>to</code>.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#addNode(ru.nsu.anishchenko.Graph.Node)" class="member-name-link">addNode</a><wbr>(<a href="Graph.Node.html" title="class in ru.nsu.anishchenko">Graph.Node</a>&nbsp;node)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Adds node to graph.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#clear()" class="member-name-link">clear</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Delete all nodes and edges.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#deleteEdge(ru.nsu.anishchenko.Graph.Node,ru.nsu.anishchenko.Graph.Node)" class="member-name-link">deleteEdge</a><wbr>(<a href="Graph.Node.html" title="class in ru.nsu.anishchenko">Graph.Node</a>&nbsp;from,
  <a href="Graph.Node.html" title="class in ru.nsu.anishchenko">Graph.Node</a>&nbsp;to)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Delete directed edge from <code>from</code> to <code>to</code>.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#deleteNode(ru.nsu.anishchenko.Graph.Node)" class="member-name-link">deleteNode</a><wbr>(<a href="Graph.Node.html" title="class in ru.nsu.anishchenko">Graph.Node</a>&nbsp;node)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#equals(java.lang.Object)" class="member-name-link">equals</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;obj)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a><wbr>&lt;<a href="Graph.Edge.html" title="class in ru.nsu.anishchenko">Graph.Edge</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getEdges()" class="member-name-link">getEdges</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a><wbr>&lt;<a href="Graph.Node.html" title="class in ru.nsu.anishchenko">Graph.Node</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getNeighbours(ru.nsu.anishchenko.Graph.Node)" class="member-name-link">getNeighbours</a><wbr>(<a href="Graph.Node.html" title="class in ru.nsu.anishchenko">Graph.Node</a>&nbsp;node)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Delete node from graph.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a><wbr>&lt;<a href="Graph.Edge.html" title="class in ru.nsu.anishchenko">Graph.Edge</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getEdges()" class="member-name-link">getEdges</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Get all edges in graph.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a><wbr>&lt;<a href="Graph.Node.html" title="class in ru.nsu.anishchenko">Graph.Node</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getNodes()" class="member-name-link">getNodes</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#readFile(java.lang.String)" class="member-name-link">readFile</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;file)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="Graph.Node.html" title="class in ru.nsu.anishchenko">Graph.Node</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#topologicalSort()" class="member-name-link">topologicalSort</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getNeighbours(ru.nsu.anishchenko.Graph.Node)" class="member-name-link">getNeighbours</a><wbr>(<a href="Graph.Node.html" title="class in ru.nsu.anishchenko">Graph.Node</a>&nbsp;node)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Get all nodes.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a><wbr>&lt;<a href="Graph.Node.html" title="class in ru.nsu.anishchenko">Graph.Node</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getNodes()" class="member-name-link">getNodes</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Get all nodes in graph.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#readFile(java.lang.String)" class="member-name-link">readFile</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;file)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">Build graph from file.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="Graph.Node.html" title="class in ru.nsu.anishchenko">Graph.Node</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#topologicalSort()" class="member-name-link">topologicalSort</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">Topological sort of graph.</div>
+</div>
 </div>
 </div>
 </div>
@@ -178,80 +197,118 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="addNode(ru.nsu.anishchenko.Graph.Node)">
 <h3>addNode</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">addNode</span><wbr><span class="parameters">(<a href="Graph.Node.html" title="class in ru.nsu.anishchenko">Graph.Node</a>&nbsp;node)</span></div>
+<div class="block">Adds node to graph.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>node</code> - node that need to add.</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="deleteNode(ru.nsu.anishchenko.Graph.Node)">
 <h3>deleteNode</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">deleteNode</span><wbr><span class="parameters">(<a href="Graph.Node.html" title="class in ru.nsu.anishchenko">Graph.Node</a>&nbsp;node)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">deleteNode</span><wbr><span class="parameters">(<a href="Graph.Node.html" title="class in ru.nsu.anishchenko">Graph.Node</a>&nbsp;node)</span>
+         throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></span></div>
+<div class="block">Delete node from graph.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>node</code> - node that need to delete.</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if there is no node in graph.</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getNodes()">
 <h3>getNodes</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;<a href="Graph.Node.html" title="class in ru.nsu.anishchenko">Graph.Node</a>&gt;</span>&nbsp;<span class="element-name">getNodes</span>()</div>
+<div class="block">Get all nodes in graph.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>list of graph nodes.</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="addEdge(ru.nsu.anishchenko.Graph.Node,ru.nsu.anishchenko.Graph.Node)">
 <h3>addEdge</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">addEdge</span><wbr><span class="parameters">(<a href="Graph.Node.html" title="class in ru.nsu.anishchenko">Graph.Node</a>&nbsp;from,
- <a href="Graph.Node.html" title="class in ru.nsu.anishchenko">Graph.Node</a>&nbsp;to)</span></div>
+ <a href="Graph.Node.html" title="class in ru.nsu.anishchenko">Graph.Node</a>&nbsp;to)</span>
+      throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></span></div>
+<div class="block">Add directed edge from <code>from</code> to <code>to</code>.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>from</code> - node where edge begins.</dd>
+<dd><code>to</code> - node where edge ends.</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if there is no <code>from</code> or <code>to</code> node in graph.</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="deleteEdge(ru.nsu.anishchenko.Graph.Node,ru.nsu.anishchenko.Graph.Node)">
 <h3>deleteEdge</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">deleteEdge</span><wbr><span class="parameters">(<a href="Graph.Node.html" title="class in ru.nsu.anishchenko">Graph.Node</a>&nbsp;from,
- <a href="Graph.Node.html" title="class in ru.nsu.anishchenko">Graph.Node</a>&nbsp;to)</span></div>
+ <a href="Graph.Node.html" title="class in ru.nsu.anishchenko">Graph.Node</a>&nbsp;to)</span>
+         throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></span></div>
+<div class="block">Delete directed edge from <code>from</code> to <code>to</code>.
+ Edge needs to be in graph.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>from</code> - node where edge begins.</dd>
+<dd><code>to</code> - node where edge ends.</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if there is no <code>from</code> or <code>to</code> node in graph.</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getEdges()">
 <h3>getEdges</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;<a href="Graph.Edge.html" title="class in ru.nsu.anishchenko">Graph.Edge</a>&gt;</span>&nbsp;<span class="element-name">getEdges</span>()</div>
+<div class="block">Get all edges in graph.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>list of graph edges.</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getNeighbours(ru.nsu.anishchenko.Graph.Node)">
 <h3>getNeighbours</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;<a href="Graph.Node.html" title="class in ru.nsu.anishchenko">Graph.Node</a>&gt;</span>&nbsp;<span class="element-name">getNeighbours</span><wbr><span class="parameters">(<a href="Graph.Node.html" title="class in ru.nsu.anishchenko">Graph.Node</a>&nbsp;node)</span></div>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/ArrayList.html" title="class or interface in java.util" class="external-link">ArrayList</a>&lt;<a href="Graph.Node.html" title="class in ru.nsu.anishchenko">Graph.Node</a>&gt;</span>&nbsp;<span class="element-name">getNeighbours</span><wbr><span class="parameters">(<a href="Graph.Node.html" title="class in ru.nsu.anishchenko">Graph.Node</a>&nbsp;node)</span>
+                             throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></span></div>
+<div class="block">Get all nodes.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>node</code> - node to get neighbours from.</dd>
+<dt>Returns:</dt>
+<dd>list of node neighbours.</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if there is no <code>from</code> or <code>to</code> node in graph.</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="clear()">
 <h3>clear</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">clear</span>()</div>
+<div class="block">Delete all nodes and edges.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="readFile(java.lang.String)">
 <h3>readFile</h3>
 <div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">readFile</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;file)</span>
-               throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
+               throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/NullPointerException.html" title="class or interface in java.lang" class="external-link">NullPointerException</a>,
+<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></span></div>
+<div class="block">Build graph from file.</div>
 <dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>file</code> - path of file.</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code></dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="equals(java.lang.Object)">
-<h3>equals</h3>
-<div class="member-signature"><span class="return-type">boolean</span>&nbsp;<span class="element-name">equals</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;obj)</span></div>
-<dl class="notes">
-<dt>Overrides:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="toString()">
-<h3>toString</h3>
-<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">toString</span>()</div>
-<dl class="notes">
-<dt>Overrides:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/NullPointerException.html" title="class or interface in java.lang" class="external-link">NullPointerException</a></code> - if file does not exist.</dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/io/IOException.html" title="class or interface in java.io" class="external-link">IOException</a></code> - if IO error occurs.</dd>
 </dl>
 </section>
 </li>
@@ -260,9 +317,12 @@ loadScripts(document, 'script');</script>
 <h3>topologicalSort</h3>
 <div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Graph.Node.html" title="class in ru.nsu.anishchenko">Graph.Node</a>&gt;</span>&nbsp;<span class="element-name">topologicalSort</span>()
                                   throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a></span></div>
+<div class="block">Topological sort of graph.</div>
 <dl class="notes">
+<dt>Returns:</dt>
+<dd>topological sorted list of graph nodes.</dd>
 <dt>Throws:</dt>
-<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/RuntimeException.html" title="class or interface in java.lang" class="external-link">RuntimeException</a></code> - if graph has cycles.</dd>
 </dl>
 </section>
 </li>
