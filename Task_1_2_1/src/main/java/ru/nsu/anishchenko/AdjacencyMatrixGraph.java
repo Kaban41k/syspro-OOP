@@ -2,6 +2,9 @@ package ru.nsu.anishchenko;
 
 import java.util.ArrayList;
 
+/**
+ * Adjacency matrix graph interface implementation.
+ */
 public class AdjacencyMatrixGraph implements Graph {
     private final ArrayList<Node> nodes = new ArrayList<>();
     private final ArrayList<ArrayList<Boolean>> matrix = new ArrayList<>();
@@ -79,7 +82,11 @@ public class AdjacencyMatrixGraph implements Graph {
     }
 
     @Override
-    public ArrayList<Node> getNeighbours(Node node) {
+    public ArrayList<Node> getNeighbours(Node node) throws IllegalArgumentException {
+        if (!nodes.contains(node)) {
+            throw new IllegalArgumentException("Node is not in graph");
+        }
+
         ArrayList<Node> res = new ArrayList<>();
         int node_index = nodes.indexOf(node);
 
@@ -92,6 +99,11 @@ public class AdjacencyMatrixGraph implements Graph {
         return res;
     }
 
+    /**
+     * Get matrix of graph.
+     *
+     * @return adjacency matrix.
+     */
     public ArrayList<ArrayList<Boolean>> getMatrix() {
         return matrix;
     }

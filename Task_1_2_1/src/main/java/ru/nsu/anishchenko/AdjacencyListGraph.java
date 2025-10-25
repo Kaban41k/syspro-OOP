@@ -2,6 +2,9 @@ package ru.nsu.anishchenko;
 
 import java.util.ArrayList;
 
+/**
+ * Adjacency list graph interface implementation.
+ */
 public class AdjacencyListGraph implements Graph {
     private final ArrayList<Node> nodes = new ArrayList<>();
     private final ArrayList<ArrayList<Node>> lists = new ArrayList<>();
@@ -57,7 +60,7 @@ public class AdjacencyListGraph implements Graph {
     }
 
     @Override
-    public void deleteEdge(Node from, Node to) {
+    public void deleteEdge(Node from, Node to) throws IllegalArgumentException{
         if (!nodes.contains(from) || !nodes.contains(to)) {
             throw new IllegalArgumentException("Node is not in graph");
         }
@@ -81,7 +84,11 @@ public class AdjacencyListGraph implements Graph {
     }
 
     @Override
-    public ArrayList<Node> getNeighbours(Node node) {
+    public ArrayList<Node> getNeighbours(Node node) throws IllegalArgumentException {
+        if (!nodes.contains(node)) {
+            throw new IllegalArgumentException("Node is not in graph");
+        }
+
         return (ArrayList<Node>) lists.get(nodes.indexOf(node)).clone();
     }
 

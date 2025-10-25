@@ -9,20 +9,82 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Stack;
 
+/**
+ * Graph interface.
+ */
 public interface Graph {
+
+    /**
+     * Adds node to graph.
+     *
+     * @param node node that need to add.
+     */
     void addNode(Node node);
-    void deleteNode(Node node);
+
+    /**
+     * Delete node from graph.
+     *
+     * @param node node that need to delete.
+     * @throws IllegalArgumentException if there is no node in graph.
+     */
+    void deleteNode(Node node) throws IllegalArgumentException;
+
+    /**
+     * Get all nodes in graph.
+     *
+     * @return list of graph nodes.
+     */
     ArrayList<Node> getNodes();
 
-    void addEdge(Node from, Node to);
-    void deleteEdge(Node from, Node to);
+    /**
+     * Add directed edge from {@code from} to {@code to}.
+     *
+     * @param from node where edge begins.
+     * @param to   node where edge ends.
+     * @throws IllegalArgumentException if there is no {@code from} or {@code to} node in graph.
+     */
+    void addEdge(Node from, Node to) throws IllegalArgumentException;
+
+
+    /**
+     * Delete directed edge from {@code from} to {@code to}.
+     * Edge needs to be in graph.
+     *
+     * @param from node where edge begins.
+     * @param to   node where edge ends.
+     * @throws IllegalArgumentException if there is no {@code from} or {@code to} node in graph.
+     */
+    void deleteEdge(Node from, Node to) throws IllegalArgumentException;
+
+    /**
+     * Get all edges in graph.
+     *
+     * @return list of graph edges.
+     */
     ArrayList<Edge> getEdges();
 
-    ArrayList<Node> getNeighbours(Node node);
+    /**
+     * Get all nodes.
+     *
+     * @param node node to get neighbours from.
+     * @return list of node neighbours.
+     * @throws IllegalArgumentException if there is no {@code from} or {@code to} node in graph.
+     */
+    ArrayList<Node> getNeighbours(Node node) throws IllegalArgumentException;
 
+    /**
+     * Delete all nodes and edges.
+     */
     void clear();
 
-    default void readFile(String file) throws IOException {
+    /**
+     * Build graph from file.
+     *
+     * @param file path of file.
+     * @throws NullPointerException if file does not exist.
+     * @throws IOException          if IO error occurs.
+     */
+    default void readFile(String file) throws NullPointerException, IOException {
         clear();
 
         List<String> lines = Files.readAllLines(Paths.get(file));
@@ -45,10 +107,12 @@ public interface Graph {
         }
     }
 
-    boolean equals(Object obj);
-
-    String toString();
-
+    /**
+     * Topological sort of graph.
+     *
+     * @return topological sorted list of graph nodes.
+     * @throws RuntimeException if graph has cycles.
+     */
     default List<Node> topologicalSort() throws RuntimeException {
         ArrayList<Node> nodes = new ArrayList<>(getNodes());
         Stack<Node> stack = new Stack<>();
@@ -94,10 +158,17 @@ public interface Graph {
         return res.reversed();
     }
 
+
+    /**
+     * Graph Node class.
+     */
     class Node {
         // Some data
     }
 
+    /**
+     * Graph Edge class.
+     */
     class Edge {
         private final Node from;
         private final Node to;
@@ -111,15 +182,31 @@ public interface Graph {
             return from.equals(another_edge.getFrom()) && to.equals(another_edge.getTo());
         }
 
-        public Edge(Node source, Node destination) {
-            this.from = source;
-            this.to = destination;
+        /**
+         * Initializing from and to.
+         *
+         * @param from node where edge begins.
+         * @param to   node where edge ends.
+         */
+        public Edge(Node from, Node to) {
+            this.from = from;
+            this.to = to;
         }
 
+        /**
+         * Get end node.
+         *
+         * @return node where edge begins.
+         */
         public Node getFrom() {
             return from;
         }
 
+        /**
+         * Get start node.
+         *
+         * @return node where edge starts.
+         */
         public Node getTo() {
             return to;
         }

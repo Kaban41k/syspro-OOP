@@ -2,6 +2,9 @@ package ru.nsu.anishchenko;
 
 import java.util.ArrayList;
 
+/**
+ * Incidence matrix graph interface implementation.
+ */
 public class IncidenceMatrixGraph implements Graph {
     private final ArrayList<Node> nodes = new ArrayList<>();
     private final ArrayList<ArrayList<Integer>> matrix = new ArrayList<>();
@@ -51,7 +54,7 @@ public class IncidenceMatrixGraph implements Graph {
     }
 
     @Override
-    public void addEdge(Node from, Node to) {
+    public void addEdge(Node from, Node to) throws IllegalArgumentException{
         if (!nodes.contains(from) || !nodes.contains(to)) {
             throw new IllegalArgumentException("Node is not in graph");
         }
@@ -75,7 +78,7 @@ public class IncidenceMatrixGraph implements Graph {
     }
 
     @Override
-    public void deleteEdge(Node from, Node to) {
+    public void deleteEdge(Node from, Node to) throws IllegalArgumentException{
         if (!nodes.contains(from) || !nodes.contains(to)) {
             throw new IllegalArgumentException("Node is not in graph");
         }
@@ -115,7 +118,11 @@ public class IncidenceMatrixGraph implements Graph {
     }
 
     @Override
-    public ArrayList<Node> getNeighbours(Node node) {
+    public ArrayList<Node> getNeighbours(Node node) throws IllegalArgumentException {
+        if (!nodes.contains(node)) {
+            throw new IllegalArgumentException("Node is not in graph");
+        }
+
         ArrayList<Node> res = new ArrayList<>();
 
         int node_index = nodes.indexOf(node);
