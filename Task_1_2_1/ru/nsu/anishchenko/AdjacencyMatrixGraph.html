@@ -268,7 +268,8 @@ implements <a href="Graph.html" title="interface in ru.nsu.anishchenko">Graph</a
 <section class="detail" id="addEdge(ru.nsu.anishchenko.Graph.Node,ru.nsu.anishchenko.Graph.Node)">
 <h3>addEdge</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addEdge</span><wbr><span class="parameters">(<a href="Graph.Node.html" title="class in ru.nsu.anishchenko">Graph.Node</a>&nbsp;from,
- <a href="Graph.Node.html" title="class in ru.nsu.anishchenko">Graph.Node</a>&nbsp;to)</span></div>
+ <a href="Graph.Node.html" title="class in ru.nsu.anishchenko">Graph.Node</a>&nbsp;to)</span>
+             throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></span></div>
 <div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="Graph.html#addEdge(ru.nsu.anishchenko.Graph.Node,ru.nsu.anishchenko.Graph.Node)">Graph</a></code></span></div>
 <div class="block">Add directed edge from <code>from</code> to <code>to</code>.</div>
 <dl class="notes">
@@ -277,6 +278,8 @@ implements <a href="Graph.html" title="interface in ru.nsu.anishchenko">Graph</a
 <dt>Parameters:</dt>
 <dd><code>from</code> - node where edge begins.</dd>
 <dd><code>to</code> - node where edge ends.</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if there is no <code>from</code> or <code>to</code> node in graph.</dd>
 </dl>
 </section>
 </li>
@@ -284,7 +287,8 @@ implements <a href="Graph.html" title="interface in ru.nsu.anishchenko">Graph</a
 <section class="detail" id="deleteEdge(ru.nsu.anishchenko.Graph.Node,ru.nsu.anishchenko.Graph.Node)">
 <h3>deleteEdge</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">deleteEdge</span><wbr><span class="parameters">(<a href="Graph.Node.html" title="class in ru.nsu.anishchenko">Graph.Node</a>&nbsp;from,
- <a href="Graph.Node.html" title="class in ru.nsu.anishchenko">Graph.Node</a>&nbsp;to)</span></div>
+ <a href="Graph.Node.html" title="class in ru.nsu.anishchenko">Graph.Node</a>&nbsp;to)</span>
+                throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></span></div>
 <div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="Graph.html#deleteEdge(ru.nsu.anishchenko.Graph.Node,ru.nsu.anishchenko.Graph.Node)">Graph</a></code></span></div>
 <div class="block">Delete directed edge from <code>from</code> to <code>to</code>.
  Edge needs to be in graph.</div>
@@ -294,6 +298,8 @@ implements <a href="Graph.html" title="interface in ru.nsu.anishchenko">Graph</a
 <dt>Parameters:</dt>
 <dd><code>from</code> - node where edge begins.</dd>
 <dd><code>to</code> - node where edge ends.</dd>
+<dt>Throws:</dt>
+<dd><code><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a></code> - if there is no <code>from</code> or <code>to</code> node in graph.</dd>
 </dl>
 </section>
 </li>
