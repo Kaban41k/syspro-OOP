@@ -88,10 +88,10 @@ public class AdjacencyMatrixGraph implements Graph {
         }
 
         ArrayList<Node> res = new ArrayList<>();
-        int node_index = nodes.indexOf(node);
+        int nodeIndex = nodes.indexOf(node);
 
         for (int i = 0; i < matrix.size(); i++) {
-            if (matrix.get(node_index).get(i)) {
+            if (matrix.get(nodeIndex).get(i)) {
                 res.add(nodes.get(i));
             }
         }
@@ -116,19 +116,19 @@ public class AdjacencyMatrixGraph implements Graph {
 
     @Override
     public boolean equals(Object obj) {
-        if (!(obj instanceof Graph another_graph)) {
+        if (!(obj instanceof Graph anotherGraph)) {
             return false;
         }
 
-        ArrayList<Node> nodes_this = getNodes();
-        ArrayList<Node> nodes_other = another_graph.getNodes();
-        if (!nodes_this.equals(nodes_other)) {
+        ArrayList<Node> nodesThis = getNodes();
+        ArrayList<Node> nodesOther = anotherGraph.getNodes();
+        if (!nodesThis.equals(nodesOther)) {
             return false;
         }
 
-        ArrayList<Edge> edges_this = getEdges();
-        ArrayList<Edge> edges_other = another_graph.getEdges();
-        if (!edges_this.equals(edges_other)) {
+        ArrayList<Edge> edgesThis = getEdges();
+        ArrayList<Edge> edgesOther = anotherGraph.getEdges();
+        if (!edgesThis.equals(edgesOther)) {
             return false;
         }
 
@@ -140,7 +140,10 @@ public class AdjacencyMatrixGraph implements Graph {
         StringBuilder res = new StringBuilder();
 
         for (int from = 0; from < matrix.size(); from++) {
-            if (from != 0) res.append("\n");
+            if (from != 0) {
+                res.append("\n");
+            }
+
             boolean firstNeighbour = true;
 
             for (int to = 0; to < matrix.size(); to++) {

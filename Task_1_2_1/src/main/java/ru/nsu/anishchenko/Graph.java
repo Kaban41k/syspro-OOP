@@ -82,7 +82,7 @@ public interface Graph {
      *
      * @param file path of file.
      * @throws NullPointerException if file does not exist.
-     * @throws IOException          if IO error occurs.
+     * @throws IOException if IO error occurs.
      */
     default void readFile(String file) throws NullPointerException, IOException {
         clear();
@@ -186,7 +186,7 @@ public interface Graph {
          * Initializing from and to.
          *
          * @param from node where edge begins.
-         * @param to   node where edge ends.
+         * @param to node where edge ends.
          */
         public Edge(Node from, Node to) {
             this.from = from;
